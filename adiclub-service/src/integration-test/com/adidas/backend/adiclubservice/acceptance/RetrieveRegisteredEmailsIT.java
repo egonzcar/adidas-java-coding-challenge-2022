@@ -21,11 +21,13 @@ class RetrieveRegisteredEmailsIT {
 
     @Test
     void retrieve_members_email() throws NotRegisteredEmailsException {
+        final List<String> expected = List.of("user0@gmail.com", "user1@adiclub.com", "user2@gmail.com", "user3@adiclub.com", "user4@gmail.com", "user5@adiclub.com", "user6@gmail.com", "user7@adiclub.com", "user8@gmail.com", "user9@adiclub.com");
+
         final List<String> emailsFromMembers = testSubject.getEmailsFromMembers();
 
         assertThat(emailsFromMembers)
-                .isNotEmpty();
-        System.out.println(emailsFromMembers);
+                .isNotEmpty()
+                .isEqualTo(expected);
     }
 
 }

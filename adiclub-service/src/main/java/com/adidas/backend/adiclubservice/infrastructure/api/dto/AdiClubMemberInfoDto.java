@@ -10,7 +10,7 @@ import java.time.Instant;
 public class AdiClubMemberInfoDto {
 
     private String email;
-  private Integer points;
-  private Instant registrationDate;
+    private Integer points;
+    private Instant registrationDate;
 
 }
