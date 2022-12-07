@@ -25,8 +25,8 @@ public class MessageProducer {
     public void sendMessage(final EmailEvent event) {
         log.info(String.format("Email event => %s", event.toString()));
 
-        final Message<EmailEvent> message = MessageBuilder
-                .withPayload(event)
+        final Message<String> message = MessageBuilder
+                .withPayload(event.getEmail())
                 .setHeader(KafkaHeaders.TOPIC, topic.name())
                 .build();
 
