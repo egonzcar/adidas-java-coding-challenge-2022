@@ -1,0 +1,19 @@
+@startuml
+actor dev
+dev -> CODE: Commit to new branch
+CODE -> GIT: COMMIT
+GIT -> PR: PULL REQUEST
+PR -> Jenkins
+Jenkins -> Jenkins: build, test, sonar
+actor team
+PR ->  team
+team -> PR: approve
+PR -> GIT: merge branch to master
+GIT -> Jenkins: deploy master to DEV
+group repeat till PROD
+Jenkins -> DEV: DEPLOY
+DEV -> team: check
+team -> DEV: Approve
+DEV -> PROD: Promote next env
+end
+@enduml
