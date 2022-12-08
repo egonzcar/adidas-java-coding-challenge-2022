@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: adi-club-service
+  name: adi-club-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: adi-club-service
+  strategy: { }
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.22.0 (955b78124)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: adi-club-service
+    spec:
+      containers:
+        - image: localhost/adidas-be-challenge-adiclubservice:latest
+          name: adidas-be-challenge-adiclubservice
+          resources: { }
+      restartPolicy: Always
+status: { }
