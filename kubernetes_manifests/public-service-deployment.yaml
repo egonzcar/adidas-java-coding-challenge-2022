@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.service.type: LoadBalancer
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: public-service
+  name: public-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: public-service
+  strategy: { }
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.service.type: LoadBalancer
+        kompose.version: 1.22.0 (955b78124)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: public-service
+    spec:
+      containers:
+        - image: localhost/adidas-be-challenge-publicservice:latest
+          name: adidas-be-challenge-publicservice
+          ports:
+            - containerPort: 8080
+          resources: { }
+      restartPolicy: Always
+status: { }
