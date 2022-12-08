@@ -4,8 +4,8 @@ The repo contains a skeleton of 4 Spring Boot applications, plus a Docker Compos
 <img width="365" alt="image" src="https://user-images.githubusercontent.com/15728394/199699196-3bf20be2-cc51-4718-8cc2-454c8397c9d4.png">
 
 
-- _Public Service_ in the main entry point to our system, and the only accesible one to the public.
-- _Priority Sale Service_ is the service containing the priority sale logic. 
+- _Public Service_ in the main entry point to our system, and the only accessible one to the public.
+- _Priority Sale Service_ is the service containing the priority sale logic.
 - _Adi-Club Service_ contains the information of our adiClub members. e-mail, points, registration date...
 - _Email Service_ sends a confirmation mail to the lucky ones.
 
@@ -15,8 +15,7 @@ We would like you to implement the following:
 - The communications among the different services, either sync or async.
 - API documentation using Swagger, API BluePrint or the tool you feel more comfortable with.
 
-
-Do not forget our challenge Non Functional Requirements:
+Do not forget our challenge Non-Functional Requirements:
 - **Security** for non-public services
 - Proper **exception handling** and REST responses.​
 - Unit **testing** for meaningful code (business logic / services).​
