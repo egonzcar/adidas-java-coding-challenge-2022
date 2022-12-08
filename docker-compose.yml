@@ -11,7 +11,8 @@ services:
       - "8080:8080"
     links:
       - "priority-sale-service"
-
+    labels:
+      kompose.service.type: LoadBalancer
   priority-sale-service:
     image: localhost/adidas-be-challenge-prioritysaleservice:latest
     container_name: adidas-be-challenge-prioritysaleservice
