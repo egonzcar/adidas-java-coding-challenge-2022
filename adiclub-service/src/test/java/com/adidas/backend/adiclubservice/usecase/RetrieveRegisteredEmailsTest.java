@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.catchThrowable;
 import static org.mockito.BDDMockito.given;
 
 @ExtendWith(MockitoExtension.class)
-class RetrieveRegisteredMembersTest {
+class RetrieveRegisteredEmailsTest {
 
     @Mock
     private EmailService emailService;
